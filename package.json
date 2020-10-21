@@ -2,6 +2,7 @@
   "name": "reddit-battleship",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://f001.backblazeb2.com/file/roland-chernov-reddit-test-task/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.1.0",
     "@testing-library/jest-dom": "^4.2.4",
