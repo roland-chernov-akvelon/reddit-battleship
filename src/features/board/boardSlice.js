@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { buildBoardMatrix } from "./boardUtils";
+import { buildBoardMatrix, hitOrMiss } from "./boardUtils";
 import ships from "../../ships";
 
 export const counterSlice = createSlice({
@@ -9,8 +9,12 @@ export const counterSlice = createSlice({
   },
   reducers: {
     fire: (state, action) => {
-      const { coords } = action.payload;
-      // TODO: process the action
+      const position = action.payload;
+      const [x, y] = position;
+      const newCell = hitOrMiss(state.boardCells, position);
+      // NOTE: immutability is handled internally in redux toolkit so we can mutate this
+      state.boardCells[x][y] = newCell;
+      return state;
     },
   },
 });

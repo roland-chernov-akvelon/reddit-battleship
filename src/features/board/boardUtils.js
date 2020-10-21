@@ -1,4 +1,4 @@
-import { CELL_EMPTY, CELL_SHIP } from "./boardCell.type";
+import { CELL_EMPTY, CELL_SHIP, CELL_HIT, CELL_MISS } from "./boardCell.type";
 
 // TODO: validate input
 export function buildBoardMatrix(layout) {
@@ -10,4 +10,12 @@ export function buildBoardMatrix(layout) {
     }
   }
   return matrix;
+}
+
+export function hitOrMiss(matrix, position) {
+  const [x, y] = position;
+  if (matrix[x][y] === CELL_SHIP) {
+    return CELL_HIT;
+  }
+  return CELL_MISS;
 }

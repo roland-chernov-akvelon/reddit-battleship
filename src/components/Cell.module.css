@@ -1,4 +1,6 @@
 .cell {
   width: 5vh;
   height: 5vh;
+  color: #95BFCC;
+  cursor: pointer;
 }
