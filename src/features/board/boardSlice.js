@@ -1,13 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CELL_EMPTY } from "./boardCell.type";
-
-const initialState = {
-  boardCells: new Array(10).fill(new Array(10).fill(CELL_EMPTY)),
-};
+import { buildBoardMatrix } from "./boardUtils";
+import ships from "../../ships";
 
 export const counterSlice = createSlice({
   name: "board",
-  initialState: initialState,
+  initialState: {
+    boardCells: buildBoardMatrix(ships.layout),
+  },
   reducers: {
     fire: (state, action) => {
       const { coords } = action.payload;
@@ -18,6 +17,6 @@ export const counterSlice = createSlice({
 
 export const { fire } = counterSlice.actions;
 
-export const selectBoardCells = state => state.board.boardCells;
+export const selectBoardCells = (state) => state.board.boardCells;
 
 export default counterSlice.reducer;

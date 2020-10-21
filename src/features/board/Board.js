@@ -9,13 +9,17 @@ export function Board() {
 
   return (
     <table className={styles.grid}>
-      {rows.map((row) => (
-        <tr>
-          {row.map((cell) => (
-            <td className={styles.cell}><Cell /></td>
-          ))}
-        </tr>
-      ))}
+      <tbody>
+        {rows.map((row, rowIndex) => (
+          <tr key={rowIndex}>
+            {row.map((cell, cellIndex) => (
+              <td className={styles.cell} key={`${rowIndex}:${cellIndex}`}>
+                <Cell />
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }
