@@ -6,6 +6,7 @@ export function buildBoardMatrix(layout) {
   for (const ship of layout) {
     for (const pos of ship.positions) {
       const [x, y] = pos;
+      // FIXME: proper mapping of ship types
       matrix[x][y] = CELL_SHIP;
     }
   }
