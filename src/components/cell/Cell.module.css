@@ -6,3 +6,11 @@
   background-repeat: no-repeat;
   background-size: 72px;
 }
+
+@media (max-width: 1024px) {
+  .cell {
+    width: 8vw;
+    height: 8vw;
+    background-size: 10vw;
+  }
+}
