@@ -3,7 +3,7 @@ import styles from "./Cell.module.css";
 
 function Cell(props) {
   return (
-    <div {...props} className={styles.cell}>
+    <div {...props} className={`${styles.cell} ${props.className ?? ""}`}>
       {props.children}
     </div>
   );

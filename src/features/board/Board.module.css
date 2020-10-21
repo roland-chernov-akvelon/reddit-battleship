@@ -1,10 +1,13 @@
+.board {
+  border: 8px solid #ffb000;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .grid {
-  border: 2px solid #6CB9CC;
   border-collapse: collapse;
 }
 
 .cell {
-  border: 1px solid #95BFCC;
-  text-align: center;
-  vertical-align: middle;
+  border: 2px solid #979797;
 }
