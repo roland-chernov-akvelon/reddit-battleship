@@ -1,0 +1,26 @@
+.shipStats {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.indicators {
+  display: flex;
+  margin-left: .7em;
+}
+
+.indicator {
+  margin: 0 .2em;
+  width: 26px;
+  height: 26px;
+  background-size: 26px 26px;
+  background-position: center;
+}
+
+.hit {
+  background-image: url("./hit.png");
+}
+
+.empty {
+  background-image: url("./empty.png");
+}

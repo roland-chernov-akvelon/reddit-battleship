@@ -1,9 +1,20 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectStats } from "./boardSlice";
+import ShipStat from "../../components/shipStat/ShipStat";
 
 export function BoardStats() {
   const stats = useSelector(selectStats);
-  // TODO: output hits per each ship type
-  return <div>{JSON.stringify(stats)}</div>
+
+  return (
+    <div>
+      {Object.keys(stats).map((shipType) => (
+        <ShipStat
+          shipType={shipType}
+          size={stats[shipType].size}
+          hits={stats[shipType].hits}
+        />
+      ))}
+    </div>
+  );
 }

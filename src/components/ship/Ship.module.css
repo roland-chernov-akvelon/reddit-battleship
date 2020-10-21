@@ -1,0 +1,27 @@
+.ship {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 240px 64px;
+  width: 240px;
+  height: 64px;
+}
+
+.carrier {
+  background-image: url("./carrier.png");
+}
+
+.battleship {
+  background-image: url("./battleship.png");
+}
+
+.cruiser {
+  background-image: url("./cruiser.png");
+}
+
+.submarine {
+  background-image: url("./submarine.png");
+}
+
+.destroyer {
+  background-image: url("./destroyer.png");
+}
